@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { SelectStyled } from './filter-styled'
+import { SelectStyled } from './ButtonStyled'
 
 export default function Select({ collection, value, onChange }) {
   const handleChange = e => {

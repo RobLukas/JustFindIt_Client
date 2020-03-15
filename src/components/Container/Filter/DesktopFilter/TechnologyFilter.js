@@ -1,11 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
+import IconButton from '../../../Common/Buttons/IconTechButton'
 import { technologies } from '../../../../api/filters'
 import { changeTechnologyCategory } from '../../../../redux/actions/filters'
-
-import IconButton from '../Buttons/IconTechButto'
-import { ButtonSelectStyled } from '../FilterStyled'
+import { ButtonSelectStyled } from './DesktopFilterStyled'
 
 const TechnologyFilter = ({ technologyCategory, changeTechnologyCategory }) => {
   return (

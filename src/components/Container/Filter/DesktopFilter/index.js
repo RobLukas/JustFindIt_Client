@@ -1,9 +1,9 @@
 import React from 'react'
 
-import SwitchMode from './switch-mode-button'
-import IconDropDown from './icon-dropdown'
-import ExpButton from '../Buttons/ExpButton'
-import SalaryButton from '../Buttons/salary-button'
+import SwitchMode from '../../../Common/Buttons/SwitchModeButton'
+import IconDropDown from '../../../Common/Buttons/IconDropDown'
+import ExpButton from '../../../Common/Buttons/ExpButton'
+import SalaryButton from '../../../Common/Buttons/SalaryButton'
 
 import CityFilter from './CityFilter'
 import TechnologyFilter from './TechnologyFilter'
@@ -13,7 +13,7 @@ import {
   DropDownDivStyled,
   CityCategoryContainer,
   TechnologyCategoryContainer
-} from '../FilterStyled'
+} from './DesktopFilterStyled'
 
 const DesktopFilter = () => {
   return (

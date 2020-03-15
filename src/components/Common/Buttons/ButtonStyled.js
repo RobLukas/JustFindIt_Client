@@ -1,8 +1,8 @@
 import styled from 'styled-components'
+
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz'
 import WbSunnyIcon from '@material-ui/icons/WbSunny'
 import Brightness3Icon from '@material-ui/icons/Brightness3'
-import { Button } from '@material-ui/core'
 
 const IconTechStyled = styled.svg({
   fill: 'rgb(255, 255, 255)'
@@ -34,14 +34,6 @@ const SelectStyled = styled.select({
   width: '100%',
   height: '100%'
 })
-
-const ButtonSelectStyled = styled(Button)(props => ({
-  background: props.selected
-    ? 'linear-gradient(to right, #ba68c8, #9c27b0)'
-    : null,
-  padding: '0 12px'
-}))
-
 
 const SunnyIconStyled = styled(WbSunnyIcon)({
   color: '#b7c4d0',
@@ -106,8 +98,6 @@ const TitleTechnologySpanStyled = styled.span({
   textAlign: 'center'
 })
 
-
-
 const DropDownSalaryStyled = styled.div({
   margin: '0 10px 0 0',
   display: 'inline-block',
@@ -146,17 +136,16 @@ const DropDownDivInsideStyled = styled.div({
 
 export {
   MoreHorizIconStyled,
-  IconTechStyled,
-  SelectStyled,
-  ButtonSelectStyled,
-  TechnologyIconStyled,
-  IconDivInnerStyled,
-  TitleTechnologySpanStyled,
-  IconDropDownStyled,
   IconButtonContainer,
   DropDownExpStyled,
-  DropDownSalaryStyled,
   DropDownDivInsideStyled,
+  TitleTechnologySpanStyled,
+  TechnologyIconStyled,
+  IconDivInnerStyled,
+  IconTechStyled,
+  DropDownSalaryStyled,
+  SelectStyled,
+  IconDropDownStyled,
   SunnyIconStyled,
   BrightnessIconStyled
 }

@@ -1,5 +1,5 @@
-import styled from './node_modules/styled-components'
-import { Icon } from './node_modules/@material-ui/core'
+import styled from 'styled-components'
+import { Icon } from '@material-ui/core'
 
 const NavStyled = styled.a({
   '@media(max-width: 1020px)': {

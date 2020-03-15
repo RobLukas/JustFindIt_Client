@@ -1,16 +1,18 @@
-import React from './node_modules/react'
+import React from 'react'
 
-import FilterMobile from './MobileFilter'
-import FilterDesktop from './DesktopFilter'
+import MobileFilter from './MobileFilter'
+import DesktopFilter from './DesktopFilter'
 
-export default function Filter() {
+const Filter = () => {
   return (
     <>
       {/* Mobile */}
-      <FilterMobile />
+      <MobileFilter />
 
       {/* Desktop */}
-      <FilterDesktop />
+      <DesktopFilter />
     </>
   )
 }
+
+export default Filter

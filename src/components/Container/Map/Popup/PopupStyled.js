@@ -52,6 +52,6 @@ export {
   SpanPopupStyled,
   ImgContainerStyled,
   ImgStyled,
-    DescriptionContainer,
-    SalaryDescStyled
+  DescriptionContainer,
+  SalaryDescStyled
 }

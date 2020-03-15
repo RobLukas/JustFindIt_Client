@@ -1,8 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import Select from './select'
-import { SeparationStyled, SelectMobileDivStyled } from '../FilterStyled'
+import Select from '../../../Common/Buttons/SelectButton'
+import { SeparationStyled, SelectMobileDivStyled } from './MobileFilterStyled'
 import { cities, technologies } from '../../../../api/filters'
 import {
   changeCityCategory,

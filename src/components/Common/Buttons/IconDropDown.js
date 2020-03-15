@@ -1,7 +1,7 @@
-import React from './node_modules/react'
-import IconButton from './node_modules/@material-ui/core/IconButton'
+import React from 'react'
+import IconButton from '@material-ui/core/IconButton'
 
-import { MoreHorizIconStyled, IconButtonContainer } from './filter-styled'
+import { MoreHorizIconStyled, IconButtonContainer } from './ButtonStyled'
 
 export default function IconDropDown() {
   return (

@@ -1,8 +1,8 @@
-import React from './node_modules/react'
-import TrendingUpIcon from './node_modules/@material-ui/icons/TrendingUp'
-import ExpandMoreIcon from './node_modules/@material-ui/icons/ExpandMore'
+import React from 'react'
+import TrendingUpIcon from '@material-ui/icons/TrendingUp'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 
-import { DropDownExpStyled, DropDownDivInsideStyled } from '../Filter/FilterStyled'
+import { DropDownExpStyled, DropDownDivInsideStyled } from './ButtonStyled'
 
 export default function ExpButton() {
   return (

@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { ButtonSelectStyled } from '../FilterStyled'
+import { ButtonSelectStyled } from './DesktopFilterStyled'
 import { cities } from '../../../../api/filters'
 import { changeCityCategory } from '../../../../redux/actions/filters'
 

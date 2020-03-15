@@ -1,5 +1,3 @@
 export { default as App } from './App'
-export { NotFound } from './Page/NotFound'
-export { default as Offers } from './Offers'
-export { Header } from './Container/Header'
-export { default as Filter } from './Common/Filter'
+export { default as NotFound } from '../components/Page/NotFound'
+export { default as Offers } from '../components/Page/Offers'

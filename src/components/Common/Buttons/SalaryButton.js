@@ -1,7 +1,7 @@
-import React from './node_modules/react'
-import ExpandMoreIcon from './node_modules/@material-ui/icons/ExpandMore'
+import React from 'react'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 
-import { DropDownSalaryStyled, DropDownDivInsideStyled } from './filter-styled'
+import { DropDownSalaryStyled, DropDownDivInsideStyled } from './ButtonStyled'
 
 export default function SalaryButton() {
   return (

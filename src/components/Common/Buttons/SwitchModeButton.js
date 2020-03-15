@@ -2,7 +2,7 @@ import React from 'react'
 
 import Switch from '@material-ui/core/Switch'
 
-import { SunnyIconStyled, BrightnessIconStyled } from './filter-styled'
+import { SunnyIconStyled, BrightnessIconStyled } from './ButtonStyled'
 
 export default function SwitchModeButton() {
   return (

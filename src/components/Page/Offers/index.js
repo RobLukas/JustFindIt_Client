@@ -1,10 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { Header } from '../../index'
-import Filter from '../../Common/Filter'
-import OfferItem from '../../Common/OfferItem'
-import Map from '../common/map'
+import Header from '../../Container/Header'
+import Filter from '../../Container/Filter'
+import OfferItems from '../../Container/Offers'
+import Map from '../../Container/Map'
+
 import offersData from '../../../api/offers'
 import { filter } from '../../../api/filters'
 
@@ -16,7 +17,7 @@ const Offers = ({ cityCategory, technologyCategory }) => {
       <Header />
       <div style={{ flex: 1 }}>
         <Filter />
-        <OfferItem offersList={filteredOffers} />
+        <OfferItems offersList={filteredOffers} />
         <Map offersList={filteredOffers} />
       </div>
     </>

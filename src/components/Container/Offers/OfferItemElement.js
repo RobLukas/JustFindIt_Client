@@ -1,6 +1,6 @@
-import React from './node_modules/react'
-import BusinessIcon from './node_modules/@material-ui/icons/Business'
-import PlaceIcon from './node_modules/@material-ui/icons/Place'
+import React from 'react'
+import BusinessIcon from '@material-ui/icons/Business'
+import PlaceIcon from '@material-ui/icons/Place'
 
 import {
   OfferItemLinkStyled,
@@ -10,7 +10,7 @@ import {
   OfferItemDivBlockTitles,
   OfferItemTitlePrice,
   OfferItemDivBlockAddress
-} from './offer-item-styled'
+} from './OfferItemStyled'
 import linearCollection from './CollectionLineargradient'
 
 export default function OfferItemElement({

@@ -6,7 +6,7 @@ import {
   TechnologyIconStyled,
   IconDivInnerStyled,
   IconTechStyled
-} from '../Filter/FilterStyled'
+} from './ButtonStyled'
 
 export default function IconButton({
   technology,
