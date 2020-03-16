@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 import Header from '../../Container/Header'
 import Filter from '../../Container/Filter'
-import OfferItems from '../../Container/Offers'
+import OfferList from '../../Container/OfferList'
 import Map from '../../Container/Map'
 
 import offersData from '../../../api/offers'
@@ -17,7 +17,7 @@ const Offers = ({ cityCategory, technologyCategory }) => {
       <Header />
       <div style={{ flex: 1 }}>
         <Filter />
-        <OfferItems offersList={filteredOffers} />
+        <OfferList offersList={filteredOffers} />
         <Map offersList={filteredOffers} />
       </div>
     </>

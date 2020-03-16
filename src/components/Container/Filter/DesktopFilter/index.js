@@ -1,7 +1,7 @@
 import React from 'react'
 
 import SwitchMode from '../../../Common/Buttons/SwitchModeButton'
-import IconDropDown from '../../../Common/Buttons/IconDropDown'
+import IconDropDown from '../../../Common/DropDowns/IconDropDown'
 import ExpButton from '../../../Common/Buttons/ExpButton'
 import SalaryButton from '../../../Common/Buttons/SalaryButton'
 
