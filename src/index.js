@@ -5,7 +5,7 @@ import { Provider } from 'react-redux'
 import { App } from './components'
 import { store } from './redux/store'
 import * as serviceWorker from './serviceWorker'
-import ThemeWrapper from './components/App/theme-wrapper'
+import ThemeWrapper from './components/App/ThemeWrapper'
 
 ReactDOM.render(
   <Provider store={store}>

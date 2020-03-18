@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz'
 import WbSunnyIcon from '@material-ui/icons/WbSunny'
 import Brightness3Icon from '@material-ui/icons/Brightness3'
@@ -16,15 +15,14 @@ const IconButtonContainer = styled.div({
   height: 35
 })
 
-const MoreHorizIconStyled = styled(MoreHorizIcon)({
-  display: 'block',
-  color: '#b7c4d0'
-})
+const MoreHorizIconStyled = styled(MoreHorizIcon)(({ theme }) => ({
+  display: 'block'
+}))
 
-const SelectStyled = styled.select({
+const SelectStyled = styled.select(({ theme }) => ({
   display: 'inherit',
-  color: '#b7c4d0',
-  backgroundColor: '#4d5052',
+  color: theme.primary.color,
+  backgroundColor: theme.secondary.background,
   fontSize: 18,
   borderRadius: 3,
   padding: 15,
@@ -33,20 +31,18 @@ const SelectStyled = styled.select({
   WebkitAppearance: 'none',
   width: '100%',
   height: '100%'
-})
+}))
 
-const SunnyIconStyled = styled(WbSunnyIcon)({
-  color: '#b7c4d0',
+const SunnyIconStyled = styled(WbSunnyIcon)(({ theme }) => ({
   fontSize: 22,
   verticalAlign: 'middle'
-})
+}))
 
-const BrightnessIconStyled = styled(Brightness3Icon)({
-  color: '#b7c4d0',
+const BrightnessIconStyled = styled(Brightness3Icon)(({ theme }) => ({
   fontSize: 22,
   transform: 'scaleX(-1)',
   verticalAlign: 'middle'
-})
+}))
 
 const IconDivInnerStyled = styled.div(props => ({
   background:
@@ -55,6 +51,7 @@ const IconDivInnerStyled = styled.div(props => ({
       : 'linear-gradient(-90deg, rgb(145, 147, 170), rgb(125, 130, 168))',
   display: 'flex',
   margin: '0 auto',
+  paddingBottom: 5,
   alignItems: 'center',
   justifyContent: 'center',
   boxShadow: 'none',
@@ -87,16 +84,17 @@ const IconDropDownStyled = styled.div({
   marginTop: 6
 })
 
-const TitleTechnologySpanStyled = styled.span({
-  color: '#b7c4d0',
+const TitleTechnologySpanStyled = styled.span(({ theme }) => ({
+  color: theme.secondary.color,
   fontSize: '0.7rem',
+  paddingTop: 5,
   textOverflow: 'ellipsis',
   whiteSpace: 'nowrap',
   overflow: 'hidden',
   width: '100%',
   display: 'inline-block',
   textAlign: 'center'
-})
+}))
 
 const DropDownSalaryStyled = styled.div({
   margin: '0 10px 0 0',
@@ -109,9 +107,9 @@ const DropDownExpStyled = styled.div({
   position: 'relative'
 })
 
-const DropDownDivInsideStyled = styled.div({
-  color: '#b7c4d0',
-  backgroundColor: '#4d5052',
+const DropDownDivInsideStyled = styled.div(({ theme }) => ({
+  color: theme.primary.color,
+  backgroundColor: theme.secondary.background,
   marginLeft: 0,
   padding: '0 7px 0 12px',
   margin: 0,
@@ -132,7 +130,7 @@ const DropDownDivInsideStyled = styled.div({
     boxShadow:
       '0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2)'
   }
-})
+}))
 
 export {
   MoreHorizIconStyled,

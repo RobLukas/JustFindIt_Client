@@ -15,7 +15,7 @@ const Header = () => {
       <NavLink iconComponent={WorkOutlineIcon} link={'/'} desc={'Job offers'} />
       <NavLink iconComponent={BusinessIcon} link={'/'} desc={'Brand Stories'} />
       <MenuLinkStyled>
-        <IconButton style={{ color: '#b7c4d0' }}>
+        <IconButton>
           <MenuIcon />
         </IconButton>
       </MenuLinkStyled>

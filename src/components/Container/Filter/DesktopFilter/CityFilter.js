@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { ButtonSelectStyled } from './DesktopFilterStyled'
+import { FilterButtonStyled } from './DesktopFilterStyled'
 import { cities } from '../../../../api/filters'
 import { changeCityCategory } from '../../../../redux/actions/filters'
 
@@ -10,12 +10,12 @@ export const CityFilter = ({ cityCategory, changeCityCategory }) => {
     <>
       {cities.map(city => {
         return (
-          <ButtonSelectStyled
+          <FilterButtonStyled
             selected={city === cityCategory}
             onClick={e => changeCityCategory(city)}
           >
             {city}
-          </ButtonSelectStyled>
+          </FilterButtonStyled>
         )
       })}
     </>

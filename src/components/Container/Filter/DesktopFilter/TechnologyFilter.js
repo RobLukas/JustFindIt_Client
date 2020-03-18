@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import IconButton from '../../../Common/Buttons/IconTechButton'
 import { technologies } from '../../../../api/filters'
 import { changeTechnologyCategory } from '../../../../redux/actions/filters'
-import { ButtonSelectStyled } from './DesktopFilterStyled'
+import { FilterButtonStyled } from './DesktopFilterStyled'
 
 const TechnologyFilter = ({ technologyCategory, changeTechnologyCategory }) => {
   return (
@@ -12,12 +12,12 @@ const TechnologyFilter = ({ technologyCategory, changeTechnologyCategory }) => {
       {technologies.map(technology => {
         if (technology === 'All') {
           return (
-            <ButtonSelectStyled
+            <FilterButtonStyled
               selected={technology === technologyCategory}
               onClick={e => changeTechnologyCategory(technology)}
             >
               All
-            </ButtonSelectStyled>
+            </FilterButtonStyled>
           )
         }
         return (

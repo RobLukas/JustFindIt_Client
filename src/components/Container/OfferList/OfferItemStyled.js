@@ -1,18 +1,18 @@
 import styled from 'styled-components'
 import { Icon } from '@material-ui/core'
 
-const OfferItemContainer = styled.li({
+const OfferItemContainer = styled.li(({ theme }) => ({
   '@media (max-width: 1020px)': {
     height: 86
   },
   height: 77,
   cursor: 'pointer',
-  backgroundColor: '#4d5052',
+  backgroundColor: theme.secondary.background,
   borderRadius: 6,
   margin: '0 10px 12px 10px',
   padding: 0,
   display: 'flex'
-})
+}))
 
 const OfferItemContentStyled = styled.div({
   width: '100%',
@@ -29,7 +29,6 @@ const OfferItemLinkStyled = styled.a({
   display: 'flex',
   textDecoration: 'none',
   minWidth: 0,
-  color: 'black',
   height: '100%',
   fontSize: 11,
   alignItems: 'center',
@@ -59,14 +58,14 @@ const OfferItemDescContainer = styled.div({
   minWidth: 0
 })
 
-const OfferItemTitleContainer = styled.div({
+const OfferItemTitleContainer = styled.div(({ theme }) => ({
   '@media (max-width: 1020px)': {
     display: 'block'
   },
-  color: '#b7c4d0',
+  color: theme.primary.color,
   display: 'flex',
   alignItems: 'center'
-})
+}))
 
 const OfferItemTitleWorkplaceStyled = styled.span({
   '@media (max-width: 1020px)': {
@@ -109,34 +108,33 @@ const OfferItemAddressContainer = styled.div({
   marginTop: 6
 })
 
-const OfferItemIconStyled = styled(Icon)({
+const OfferItemIconStyled = styled(Icon)(({ theme }) => ({
   verticalAlign: 'text-top',
-  color: '#c7ced6',
   fontSize: 14
-})
+}))
 
-const OfferItemAddressTitleStyled = styled.span({
+const OfferItemAddressTitleStyled = styled.span(({ theme }) => ({
   verticalAlign: 'middle',
   textAlign: 'center',
-  color: '#b7c4d0',
+  color: theme.secondary.color,
   marginLeft: 3,
   fontSize: 11
-})
+}))
 
-const OfferItemNewTitleStyled = styled.span({
+const OfferItemNewTitleStyled = styled.span(({ theme }) => ({
   '@media (max-width: 1020px)': {
     marginLeft: 'auto'
   },
   marginLeft: 21,
-  color: '#ddd',
-  border: '1px solid #777',
-  backgroundColor: '#777',
+  color: theme.offers.newTitle.color,
+  border: `1px solid ${theme.offers.newTitle.background}`,
+  backgroundColor: theme.offers.newTitle.background,
   padding: '4px 7px',
   borderRadius: 16,
   whiteSpace: 'nowrap',
   verticalAlign: 'bottom',
   fontSize: 12
-})
+}))
 
 const OfferItemTechnologyContainer = styled.div({
   marginLeft: 'auto',
@@ -147,10 +145,10 @@ const OfferItemTechnologyContainer = styled.div({
   overflow: 'hidden'
 })
 
-const OfferItemTechnologyTitleStyled = styled.span({
-  color: '#b7c4d0',
-  border: '1px solid #393939',
-  backgroundColor: '#393939',
+const OfferItemTechnologyTitleStyled = styled.span(({ theme }) => ({
+  color: theme.primary.color,
+  border: `1px solid ${theme.offers.techTitle.background}`,
+  backgroundColor: theme.offers.techTitle.background,
   display: 'inline-block',
   marginLeft: 6,
   borderRadius: 16,
@@ -159,7 +157,7 @@ const OfferItemTechnologyTitleStyled = styled.span({
   textOverflow: 'ellipsis',
   overflow: 'hidden',
   minWidth: '1ch'
-})
+}))
 
 export {
   OfferItemContainer,

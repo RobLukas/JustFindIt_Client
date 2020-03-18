@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Icon } from '@material-ui/core'
 
-const NavStyled = styled.a({
+const NavStyled = styled.a(({ theme }) => ({
   '@media(max-width: 1020px)': {
     display: 'none'
   },
@@ -9,11 +9,11 @@ const NavStyled = styled.a({
   display: 'flex',
   alignItems: 'center',
   textDecoration: 'none',
-  color: '#99a1ab',
+  color: theme.secondary.color,
   '&:hover': {
     color: '#ff4081'
   }
-})
+}))
 
 const IconNavStyled = styled(Icon)({
   marginRight: '12px'

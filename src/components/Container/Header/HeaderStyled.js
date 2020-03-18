@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 
-const HeaderStyled = styled.header({
+const HeaderStyled = styled.header(({ theme }) => ({
   '@media(min-width: 1020px)': {
     height: '65px'
   },
-  backgroundColor: '#4d5052',
+  backgroundColor: theme.secondary.background,
   alignItems: 'center',
   display: 'flex'
-})
+}))
 
 const MenuLinkStyled = styled.a({
   '@media (max-width: 1020px)': {

@@ -8,8 +8,8 @@ export default createMuiTheme({
     MuiButton: {
       root: {
         color: '#b7c4d0',
-        minWidth: 40,
         backgroundColor: '#4d5052',
+        minWidth: 40,
         marginRight: 15,
         boxShadow: 'none',
         textTransform: 'none',
@@ -38,6 +38,11 @@ export default createMuiTheme({
       track: {
         backgroundColor: '#a6a8a8',
         opacity: 1
+      }
+    },
+    MuiSvgIcon: {
+      root: {
+        fill: '#99a1ab'
       }
     }
   }
