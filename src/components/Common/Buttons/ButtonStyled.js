@@ -108,16 +108,17 @@ const DropDownExpStyled = styled.div({
 })
 
 const DropDownDivInsideStyled = styled.div(({ theme }) => ({
-  color: theme.primary.color,
+  color: theme.filter.button.color,
   backgroundColor: theme.secondary.background,
   marginLeft: 0,
+  cursor: 'pointer',
   padding: '0 7px 0 12px',
   margin: 0,
   boxShadow: 'none',
   textTransform: 'none',
   height: 35,
   alignItems: 'center',
-  fontSize: '0.9rem',
+  fontSize: '0.8rem',
   borderRadius: 20,
   display: 'flex',
   textDecoration: 'none',
@@ -125,8 +126,12 @@ const DropDownDivInsideStyled = styled.div(({ theme }) => ({
   letterSpacing: '0.5px',
   outline: 0,
   border: 0,
+  '.MuiSvgIcon-root': {
+    fill: theme.filter.button.color
+  },
   '-webkit-tap-highlight-color': 'transparent',
   '&:hover': {
+    backgroundColor: 'rgba(255, 255, 255, 0.08)',
     boxShadow:
       '0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2)'
   }

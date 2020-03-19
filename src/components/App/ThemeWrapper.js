@@ -5,19 +5,22 @@ import { ThemeProvider } from 'styled-components'
 
 import GlobalStyles from './GlobalStyles'
 import MuiTheme from '../../theme/muiTheme'
-import { darkMode } from '../../theme/themeMode'
+import { darkMode, lightMode } from '../../theme/themeMode'
 
-const ThemeWrapper = ({ children }) => {
+const ThemeWrapper = props => {
+  const themeMode = props.isLightMode ? lightMode : darkMode
   return (
     <MuiThemeProvider theme={MuiTheme}>
-      <ThemeProvider theme={darkMode}>
+      <ThemeProvider theme={themeMode}>
         <GlobalStyles />
-        {children}
+        {props.children}
       </ThemeProvider>
     </MuiThemeProvider>
   )
 }
 
-const mapStateToProps = state => ({})
+const mapStateToProps = ({ themeMode }) => ({
+  isLightMode: themeMode.isLightMode
+})
 
 export default connect(mapStateToProps)(ThemeWrapper)

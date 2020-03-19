@@ -4,9 +4,11 @@ const FilterButtonStyled = styled.button(({ selected, theme }) => ({
   background: selected
     ? theme.filter.selected.background
     : theme.secondary.background,
-  color: theme.primary.color,
+  color: selected ? theme.filter.selected.color : theme.filter.button.color,
   minWidth: 40,
+  cursor: 'pointer',
   marginRight: 15,
+  fontFamily: 'inherit',
   padding: '0 12px',
   boxShadow: 'none',
   textTransform: 'none',

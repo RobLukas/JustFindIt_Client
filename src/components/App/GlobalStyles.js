@@ -5,7 +5,7 @@ const GlobalStyles = createGlobalStyle(({ theme }) => {
     body: {
       margin: 0,
       backgroundColor: theme.primary.background,
-      fontFamily: ['Open Sans', 'Helvetica', 'Arial', 'sans-serif'],
+      fontFamily: '"Open Sans", sans-serif',
       fontWeight: 300
     },
     'div#root': {
@@ -23,21 +23,24 @@ const GlobalStyles = createGlobalStyle(({ theme }) => {
       height: '100%',
       width: '100%'
     },
+    '.leaflet-bar': {
+      display: 'none'
+    },
     '.leaflet-popup-content': {
       margin: '0 !important'
     },
     '::-webkit-scrollbar': {
       width: 11,
-      backgroundColor: 'rgba(0, 0, 0, 0.15)',
+      backgroundColor: theme.scrollbar.background,
       borderRadius: 100
     },
     '::-webkit-scrollbar:hover': {
-      backgroundColor: 'rgba(0, 0, 0, 0.25)'
+      backgroundColor: theme.scrollbar.hover
     },
     /* Handle */
     '::-webkit-scrollbar-thumb': {
       borderRadius: 100,
-      background: theme.scrollbar.background,
+      background: theme.scrollbar.thumbBackground,
       minHeight: 13
     }
   }

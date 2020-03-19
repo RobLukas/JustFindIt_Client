@@ -10,7 +10,6 @@ import {
 } from './PopupStyled'
 
 export default ({ logoCompany, workplace, salary, nameCompany }) => {
-  console.log(logoCompany)
   return (
     <PopupContainerStyled>
       <ImgContainerStyled>

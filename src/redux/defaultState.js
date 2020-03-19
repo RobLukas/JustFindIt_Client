@@ -3,5 +3,5 @@ export default {
     cityCategory: 'All',
     technologyCategory: 'All'
   },
-  themeMode: 'darkMode'
+  themeMode: { isLightMode: false }
 }

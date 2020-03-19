@@ -127,11 +127,11 @@ const OfferItemNewTitleStyled = styled.span(({ theme }) => ({
   },
   marginLeft: 21,
   color: theme.offers.newTitle.color,
-  border: `1px solid ${theme.offers.newTitle.background}`,
   backgroundColor: theme.offers.newTitle.background,
   padding: '4px 7px',
   borderRadius: 16,
   whiteSpace: 'nowrap',
+  fontWeight: 400,
   verticalAlign: 'bottom',
   fontSize: 12
 }))
@@ -147,7 +147,7 @@ const OfferItemTechnologyContainer = styled.div({
 
 const OfferItemTechnologyTitleStyled = styled.span(({ theme }) => ({
   color: theme.primary.color,
-  border: `1px solid ${theme.offers.techTitle.background}`,
+  border: `1px solid ${theme.offers.techTitle.border}`,
   backgroundColor: theme.offers.techTitle.background,
   display: 'inline-block',
   marginLeft: 6,
