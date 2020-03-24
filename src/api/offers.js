@@ -1,10 +1,12 @@
 export default [
   {
-    id: 1,
+    id: 'sii-frontend-developer-react-js',
     nameCompany: 'Sii',
     mainTechnology: 'JavaScript',
     workplace: 'Frontend Developer React.js',
-    salary: '10 000 - 12 000 PLN',
+    salaryFrom: '10 000',
+    salaryTo: '12 000',
+    salaryCurrency: 'PLN',
     street: 'Grunwaldzka 20',
     city: 'Gdańsk',
     logoCompany:
@@ -17,11 +19,13 @@ export default [
     technologyCategory: 'JS'
   },
   {
-    id: 2,
+    id: 'spartez-java-developer-junior',
     nameCompany: 'Spartez',
     mainTechnology: 'Java',
     workplace: 'Java Developer (Junior)',
-    salary: '10 000 - 12 000 PLN',
+    salaryFrom: '10 000',
+    salaryTo: '12 000',
+    salaryCurrency: 'PLN',
     street: 'aleja Wojska Polskiego 56',
     city: 'Gdańsk',
     logoCompany:
@@ -34,11 +38,13 @@ export default [
     technologyCategory: 'Java'
   },
   {
-    id: 3,
+    id: 'nigel-frank-international-senior-full-stack-developer-net',
     nameCompany: 'Nigel Frank International',
     mainTechnology: '.Net',
     workplace: 'Senior Full-Stack Developer .NET',
-    salary: '13 000 - 17 000 PLN',
+    salaryFrom: '13 000',
+    salaryTo: '17 000',
+    salaryCurrency: 'PLN',
     street: 'Centrum',
     city: 'Gdańsk',
     logoCompany:
@@ -51,11 +57,13 @@ export default [
     technologyCategory: '.Net'
   },
   {
-    id: 4,
+    id: 'itfs-angular-developer',
     nameCompany: 'ITFS',
     mainTechnology: 'JavaScript',
     workplace: 'Angular Developer',
-    salary: '13 000 - 13 500 PLN',
+    salaryFrom: '13 000',
+    salaryTo: '13 500',
+    salaryCurrency: 'PLN',
     street: 'Śródmieście',
     city: 'Gdańsk',
     logoCompany:
@@ -68,11 +76,13 @@ export default [
     technologyCategory: 'JS'
   },
   {
-    id: 5,
+    id: 'itds-reactjs-developer',
     nameCompany: 'ITDS',
     mainTechnology: 'JavaScript',
     workplace: 'ReactJs Developer',
-    salary: '13 000 - 18 000 PLN',
+    salaryFrom: '13 000',
+    salaryTo: '18 000',
+    salaryCurrency: 'PLN',
     street: 'Targ Drzewny 1',
     city: 'Gdańsk',
     logoCompany:
@@ -85,11 +95,13 @@ export default [
     technologyCategory: 'JS'
   },
   {
-    id: 6,
+    id: 'it-kontrakt-net-developer',
     nameCompany: 'IT Kontrakt',
     mainTechnology: '.Net',
     workplace: '.Net Developer',
-    salary: '10 000 - 16 000 PLN',
+    salaryFrom: '10 000',
+    salaryTo: '16 000',
+    salaryCurrency: 'PLN',
     street: 'Jana z Kolna 11',
     city: 'Gdańsk',
     logoCompany:
@@ -102,11 +114,13 @@ export default [
     technologyCategory: '.Net'
   },
   {
-    id: 7,
+    id: 'steer-as-senior-c-sharp-developer',
     nameCompany: 'STEER AS',
     mainTechnology: 'C++',
     workplace: 'Senior C++ Developer',
-    salary: '15 000 - 19 000 PLN',
+    salaryFrom: '15 000',
+    salaryTo: '19 000',
+    salaryCurrency: 'PLN',
     street: 'Jana z Kolna 22/26',
     city: 'Gdańsk',
     logoCompany:
@@ -119,11 +133,13 @@ export default [
     technologyCategory: 'C++'
   },
   {
-    id: 8,
+    id: 'isolution-pl-sql-developer',
     nameCompany: 'Isolution',
     mainTechnology: 'Data',
     workplace: 'PL/SQL Developer',
-    salary: '10 920 - 15 960 PLN',
+    salaryFrom: '10 920',
+    salaryTo: '15 960',
+    salaryCurrency: 'PLN',
     street: 'Tyszkiewicza 21',
     city: 'Warszawa',
     logoCompany:
@@ -136,11 +152,13 @@ export default [
     technologyCategory: 'Data'
   },
   {
-    id: 9,
+    id: 'set-on-target-net-developer',
     nameCompany: 'Set on Target',
     mainTechnology: '.Net',
     workplace: '.Net Developer',
-    salary: '13 000 - 18 000 PLN',
+    salaryFrom: '13 000',
+    salaryTo: '18 000',
+    salaryCurrency: 'PLN',
     street: 'Idzikowskiego 16',
     city: 'Warszawa',
     logoCompany:
@@ -153,11 +171,13 @@ export default [
     technologyCategory: '.Net'
   },
   {
-    id: 10,
+    id: 'mokimo-frontend-developer',
     nameCompany: 'Makimo',
     mainTechnology: 'JavaScript',
     workplace: 'Frontend Developer',
-    salary: '6 500 - 10 500 PLN',
+    salaryFrom: '6 500',
+    salaryTo: '10 500',
+    salaryCurrency: 'PLN',
     street: 'Łąkowa 7A',
     city: 'Łódź',
     logoCompany:
@@ -170,11 +190,13 @@ export default [
     technologyCategory: 'JS'
   },
   {
-    id: 11,
+    id: 'optimo-developer-python-software-developer',
     nameCompany: 'Optimo Development',
     mainTechnology: 'Python',
     workplace: 'Python Software Developer',
-    salary: '10 000 - 15 000 PLN',
+    salaryFrom: '10 000',
+    salaryTo: '15 000',
+    salaryCurrency: 'PLN',
     street: 'Piotrkowska 280 A',
     city: 'Łódź',
     logoCompany:
@@ -187,11 +209,13 @@ export default [
     technologyCategory: 'Python'
   },
   {
-    id: 12,
+    id: 'appsgardern-frontend-developer',
     nameCompany: 'appsgarden',
     mainTechnology: 'JavaScript',
     workplace: 'Frontend Developer',
-    salary: '4 000 - 6 000 PLN',
+    salaryFrom: '4 000',
+    salaryTo: '6 000',
+    salaryCurrency: 'PLN',
     street: 'Makuszyńskiego 4',
     city: 'Kraków',
     logoCompany:
