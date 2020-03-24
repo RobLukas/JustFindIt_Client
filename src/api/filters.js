@@ -1,3 +1,5 @@
+import offerList from './offers'
+
 export const cities = [
   'All',
   'Warszawa',
@@ -20,7 +22,7 @@ export const technologies = [
   'PHP',
   'Python',
   'Testing',
-  'Blockchain',
+  'Blockchain'
 ]
 
 export const backgroundLinear = {
@@ -170,6 +172,9 @@ export const technologies1 = {
     icon: 'asda'
   }
 }
+
+export const findOfferById = offerId =>
+  offerList.filter(elem => elem.id === offerId)
 
 export const filter = (collection, citySelected, technologySelected) => {
   let filteredCollection = collection
