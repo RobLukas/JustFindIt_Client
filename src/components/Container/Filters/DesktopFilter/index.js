@@ -15,18 +15,18 @@ import {
   TechnologyCategoryContainer
 } from './DesktopFilterStyled'
 
-const DesktopFilter = () => {
+const DesktopFilter = props => {
   return (
     <>
       <FilterDesktopStyled>
         <div style={{ width: '100%' }}>
           <CityCategoryContainer>
-            <CityFilter />
+            <CityFilter {...props} />
             <IconDropDown />
             <SwitchMode />
           </CityCategoryContainer>
           <TechnologyCategoryContainer>
-            <TechnologyFilter />
+            <TechnologyFilter {...props} />
             <IconDropDown />
             <DropDownDivStyled>
               <SalaryButton />

@@ -2,11 +2,20 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import IconButton from '../../../Common/Buttons/IconTechButton'
-import { technologies } from '../../../../api/filters'
+import { technologies } from '../../../../api/categories'
 import { changeTechnologyCategory } from '../../../../redux/actions/filters'
 import { FilterButtonStyled } from './DesktopFilterStyled'
 
-const TechnologyFilter = ({ technologyCategory, changeTechnologyCategory }) => {
+const TechnologyFilter = ({
+  technologyCategory,
+  changeTechnologyCategory,
+  history
+}) => {
+  const onChangeTechnology = technology => {
+    history.push('/offers')
+    changeTechnologyCategory(technology)
+  }
+
   return (
     <>
       {technologies.map(technology => {
@@ -14,7 +23,7 @@ const TechnologyFilter = ({ technologyCategory, changeTechnologyCategory }) => {
           return (
             <FilterButtonStyled
               selected={technology === technologyCategory}
-              onClick={e => changeTechnologyCategory(technology)}
+              onClick={e => onChangeTechnology(technology)}
             >
               All
             </FilterButtonStyled>
@@ -25,7 +34,7 @@ const TechnologyFilter = ({ technologyCategory, changeTechnologyCategory }) => {
             isSelectedAll={technologyCategory === 'All'}
             selected={technology === technologyCategory}
             technology={technology}
-            onChange={changeTechnologyCategory}
+            onChange={onChangeTechnology}
           />
         )
       })}

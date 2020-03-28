@@ -9,8 +9,9 @@ import {
   MapLeafletStyled
 } from './MapStyled'
 
-const position = [52.237049, 19.17511]
-const MapContainer = ({ offersList, isLightMode }) => {
+const MapContainer = ({ offersList, geoPosition, isLightMode, ...props }) => {
+  const position = geoPosition ? geoPosition : [52.237049, 19.17511]
+  const zoom = geoPosition ? 13 : 6
   const lightModeMap =
     'https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png'
   const darkModeMap =
@@ -20,10 +21,10 @@ const MapContainer = ({ offersList, isLightMode }) => {
     <>
       <MapContainerStyled>
         <MapInsideContainerStyled>
-          <MapLeafletStyled center={position} zoom={6}>
+          <MapLeafletStyled center={position} zoom={zoom} animate={true}>
             <TileLayer url={isLightMode ? lightModeMap : darkModeMap} />
             {offersList.map(offerItem => (
-              <Marker offerItem={offerItem}></Marker>
+              <Marker offerItem={offerItem} {...props} />
             ))}
           </MapLeafletStyled>
         </MapInsideContainerStyled>

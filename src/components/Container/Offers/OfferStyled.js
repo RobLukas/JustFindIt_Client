@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const OfferListCointainer = styled.div({
+const OfferCointainer = styled.div({
   '@media (min-width: 1020px)': {
     overflowY: 'scroll',
     width: '55%',
@@ -14,9 +14,4 @@ const OfferListCointainer = styled.div({
   }
 })
 
-const OfferListOfItems = styled.ul({
-  padding: 0,
-  margin: 0
-})
-
-export { OfferListCointainer, OfferListOfItems }
+export { OfferCointainer }

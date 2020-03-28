@@ -1,5 +1,23 @@
 import L from 'leaflet'
 
+// import styled, { keyframes, css } from 'styled-components'
+
+// const bounceMarker = keyframes`
+//   0% { transform: translateY(0); }
+//   50% { transform: translateY(-100px); }
+//   100% { transform: translateY(0); }
+// `
+
+// const animationRule = css`
+//   ${bounceMarker} 2s ease-in-out infinite;
+// `
+
+// const MarkerStyled = styled(Marker)(props => ({
+//   animation: props.animation ? animationRule : ''
+//   // animationName: bounceMarker,
+//   // animationTimingFunction: 'ease-in-out'
+// }))
+
 const createIconMarker = iconSrc =>
   new L.Icon({
     iconUrl: iconSrc,
@@ -13,4 +31,9 @@ const createIconMarker = iconSrc =>
     className: 'leaflet-marker-icon'
   })
 
-export default createIconMarker
+// const createAnimationMarker = geoPosition =>
+//   new L.animatedMarker(geoPosition, {
+//     icon: createIconMarker()
+//   })
+
+export { createIconMarker }

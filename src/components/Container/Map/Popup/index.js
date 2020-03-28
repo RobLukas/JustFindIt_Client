@@ -9,16 +9,23 @@ import {
   SalaryDescStyled
 } from './PopupStyled'
 
-export default ({ logoCompany, workplace, salary, nameCompany }) => {
+export default ({
+  companyLogo,
+  workplace,
+  salaryFrom,
+  salaryTo,
+  salaryCurrency,
+  companyName
+}) => {
   return (
     <PopupContainerStyled>
       <ImgContainerStyled>
-        <ImgStyled src={logoCompany} alt={'icon'}></ImgStyled>
+        <ImgStyled src={companyLogo} alt={'icon'}></ImgStyled>
       </ImgContainerStyled>
       <DescriptionContainer>
         <SpanPopupStyled>{workplace}</SpanPopupStyled>
-        <SalaryDescStyled>{salary}</SalaryDescStyled>
-        <SpanPopupStyled>{nameCompany}</SpanPopupStyled>
+        <SalaryDescStyled>{`${salaryFrom} - ${salaryTo} ${salaryCurrency}`}</SalaryDescStyled>
+        <SpanPopupStyled>{companyName}</SpanPopupStyled>
       </DescriptionContainer>
     </PopupContainerStyled>
   )

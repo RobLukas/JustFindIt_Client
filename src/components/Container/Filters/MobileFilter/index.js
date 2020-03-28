@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 import Select from '../../../Common/Buttons/SelectButton'
 import { SeparationStyled, SelectMobileDivStyled } from './MobileFilterStyled'
-import { cities, technologies } from '../../../../api/filters'
+import { cities, technologies } from '../../../../api/categories'
 import {
   changeCityCategory,
   changeTechnologyCategory

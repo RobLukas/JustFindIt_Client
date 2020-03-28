@@ -2,17 +2,22 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import { FilterButtonStyled } from './DesktopFilterStyled'
-import { cities } from '../../../../api/filters'
+import { cities } from '../../../../api/categories'
 import { changeCityCategory } from '../../../../redux/actions/filters'
 
-export const CityFilter = ({ cityCategory, changeCityCategory }) => {
+export const CityFilter = ({ cityCategory, changeCityCategory, history }) => {
+  const onChangeCity = city => {
+    history.push('/offers')
+    changeCityCategory(city)
+  }
+
   return (
     <>
       {cities.map(city => {
         return (
           <FilterButtonStyled
             selected={city === cityCategory}
-            onClick={e => changeCityCategory(city)}
+            onClick={e => onChangeCity(city)}
           >
             {city}
           </FilterButtonStyled>

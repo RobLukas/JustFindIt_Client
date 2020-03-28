@@ -22,15 +22,17 @@ import {
   OfferItemTechnologyTitleStyled
 } from './OfferItemStyled'
 
-import linearCollection from '../../../api/iconTechTheme'
+import linearCollection from '../../../../api/iconTechTheme'
 
 const OfferItem = ({
-  nameCompany,
+  companyName,
   workplace,
-  salary,
+  salaryFrom,
+  salaryTo,
+  salaryCurrency,
   street,
   city,
-  logoCompany,
+  companyLogo,
   technologyCategory,
   technologies
 }) => {
@@ -43,7 +45,7 @@ const OfferItem = ({
           />
           <OfferItemLinkStyled>
             <OfferItemLogoContainer>
-              <OfferItemLogoStyled src={logoCompany}></OfferItemLogoStyled>
+              <OfferItemLogoStyled src={companyLogo}></OfferItemLogoStyled>
             </OfferItemLogoContainer>
             <OfferItemDescContainer>
               <OfferItemTitleContainer>
@@ -52,7 +54,7 @@ const OfferItem = ({
                 </OfferItemTitleWorkplaceStyled>
                 <OfferItemTitleSalaryContainer>
                   <OfferItemTitleSalaryStyled>
-                    {salary}
+                    {`${salaryFrom} - ${salaryTo} ${salaryCurrency}`}
                   </OfferItemTitleSalaryStyled>
                   <OfferItemNewTitleStyled>New</OfferItemNewTitleStyled>
                 </OfferItemTitleSalaryContainer>
@@ -63,7 +65,7 @@ const OfferItem = ({
                   component={BusinessIcon}
                 />
                 <OfferItemAddressTitleStyled>
-                  {nameCompany}
+                  {companyName}
                 </OfferItemAddressTitleStyled>
                 <OfferItemIconStyled
                   style={{

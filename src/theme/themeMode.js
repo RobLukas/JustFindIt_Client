@@ -21,6 +21,27 @@ export const lightMode = {
       color: '#fff'
     }
   },
+  offer: {
+    header: {
+      title: '#fff',
+      icons: {
+        companyName: '#ff5252',
+        companySize: '#fb8c00',
+        companyEMPType: '#ab47bc',
+        companySkill: '#66bb6a',
+        new: '#448aff'
+      }
+    },
+    desc: {
+      seperateLine: {
+        color: '#f3f6f8'
+      },
+      skillPoint: {
+        selected: '#ff4081',
+        unselected: '#393939'
+      }
+    }
+  },
   offers: {
     newTitle: {
       background: '#d9ddfc',
@@ -54,6 +75,27 @@ export const darkMode = {
     selected: {
       background: 'linear-gradient(to right, #ba68c8, #9c27b0)',
       color: '#ddd'
+    }
+  },
+  offer: {
+    header: {
+      title: '#fff',
+      icons: {
+        companyName: '#ff5252',
+        companySize: '#fb8c00',
+        companyEMPType: '#ab47bc',
+        companySkill: '#66bb6a',
+        new: '#448aff'
+      }
+    },
+    desc: {
+      seperateLine: {
+        color: '#393939'
+      },
+      skillPoint: {
+        selected: '#ff4081',
+        unselected: '#393939'
+      }
     }
   },
   offers: {

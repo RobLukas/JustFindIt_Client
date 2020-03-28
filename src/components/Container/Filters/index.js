@@ -3,16 +3,16 @@ import React from 'react'
 import MobileFilter from './MobileFilter'
 import DesktopFilter from './DesktopFilter'
 
-const Filter = () => {
+const Filters = props => {
   return (
     <>
       {/* Mobile */}
       <MobileFilter />
 
       {/* Desktop */}
-      <DesktopFilter />
+      <DesktopFilter {...props} />
     </>
   )
 }
 
-export default Filter
+export default Filters
