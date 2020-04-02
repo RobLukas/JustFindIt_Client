@@ -114,6 +114,9 @@ const InfoAddressStyled = styled.div({
 })
 
 const ApplyButtonStyled = styled.button({
+  '@media (max-width: 1020px)': {
+    display: 'none'
+  },
   color: '#448aff',
   backgroundColor: '#fff',
   border: 0,

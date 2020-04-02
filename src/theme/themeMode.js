@@ -7,6 +7,11 @@ export const lightMode = {
     background: '#fff',
     color: '#99a1ab'
   },
+  dropdown: {
+    button: {
+      hover: '#393939'
+    }
+  },
   scrollbar: {
     thumbBackground: '#c1c1c1',
     background: 'rgba(0,0,0,0.07)',
@@ -62,6 +67,11 @@ export const darkMode = {
   secondary: {
     background: '#4d5052',
     color: '#99a1ab'
+  },
+  dropdown: {
+    button: {
+      hover: '#393939'
+    }
   },
   scrollbar: {
     thumbBackground: '#4d5052',

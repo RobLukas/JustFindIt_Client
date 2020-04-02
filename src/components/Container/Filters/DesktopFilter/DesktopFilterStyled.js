@@ -40,7 +40,7 @@ const FilterDesktopStyled = styled.div({
   paddingTop: 3
 })
 
-const DropDownDivStyled = styled.div({
+const DropDownContainer = styled.div({
   display: 'flex',
   marginLeft: 'auto',
   float: 'right'
@@ -56,10 +56,25 @@ const TechnologyCategoryContainer = styled.div({
   marginTop: 15
 })
 
+const DropDownListElement = styled.li(({ theme }) => ({
+  textAlign: 'center',
+  justifyContent: 'center',
+  fontSize: 14,
+  display: 'flex',
+  color: theme.primary.color,
+  cursor: 'pointer',
+  margin: 0,
+  padding: '7px 24px 7px 24px',
+  '&:hover': {
+    backgroundColor: theme.dropdown.button.hover
+  }
+}))
+
 export {
   FilterButtonStyled,
   FilterDesktopStyled,
-  DropDownDivStyled,
+  DropDownContainer,
   CityCategoryContainer,
-  TechnologyCategoryContainer
+  TechnologyCategoryContainer,
+  DropDownListElement
 }

@@ -1,17 +1,18 @@
 import offerList from './offers'
+import { salaries } from './categories'
 
 export const backgroundLinear = {
-  JS: '0deg, #e0b625, #dfa320',
-  Java: '0deg, #ee7176, #ec6682',
-  Data: '0deg, #0b8b7f, #097064',
-  Blockchain: '0deg, #9e5aa9, #67298c',
-  HTML: '0deg, #f2835d, #ec6532',
-  Mobile: '0deg, #d05f8a, #a75d89',
-  PHP: '0deg, #59a9e2, #337fde',
-  Python: '0deg, #3a629b, #3b78a8',
-  Testing: '0deg, #8ccb64, #699e46',
-  '.Net': '0deg, #4fbbd6, #5ca4f0',
-  'C++': '0deg, #4fafa3, #54c096'
+  JS: '-90deg, #e0b625, #dfa320',
+  Java: '-90deg, #ee7176, #ec6682',
+  Data: '-90deg, #0b8b7f, #097064',
+  Blockchain: '-90deg, #9e5aa9, #67298c',
+  HTML: '-90deg, #f2835d, #ec6532',
+  Mobile: '-90deg, #d05f8a, #a75d89',
+  PHP: '-90deg, #59a9e2, #337fde',
+  Python: '-90deg, #3a629b, #3b78a8',
+  Testing: '-90deg, #8ccb64, #699e46',
+  '.Net': '-90deg, #4fbbd6, #5ca4f0',
+  'C++': '-90deg, #4fafa3, #54c096'
 }
 
 export const techIcons = {
@@ -97,22 +98,45 @@ export const techIcons = {
   }
 }
 
-
-
 export const findOfferById = offerId =>
   offerList.filter(elem => elem.id === offerId)
 
-export const filter = (collection, citySelected, technologySelected) => {
+export const filter = (
+  collection,
+  citySelected,
+  technologySelected,
+  expLevel,
+  minValue,
+  maxValue
+) => {
   let filteredCollection = collection
+  const { MinSalaryValue, MaxSalaryValue } = salaries
+
   if (citySelected !== 'All') {
-    filteredCollection = filteredCollection.filter(item => {
-      return item.cityCategory === citySelected
-    })
+    filteredCollection = filteredCollection.filter(
+      item => item.cityCategory === citySelected
+    )
   }
   if (technologySelected !== 'All') {
+    filteredCollection = filteredCollection.filter(
+      item => item.technologyCategory === technologySelected
+    )
+  }
+  if (expLevel !== 'All') {
+    filteredCollection = filteredCollection.filter(
+      item => item.experienceLevel === expLevel.toLowerCase()
+    )
+  }
+  if (minValue !== MinSalaryValue) {
+    filteredCollection = filteredCollection.filter(
+      item => parseInt(item.salaryFrom) >= minValue
+    )
+  }
+  if (maxValue !== MaxSalaryValue) {
     filteredCollection = filteredCollection.filter(item => {
-      return item.technologyCategory === technologySelected
+      return parseInt(item.salaryTo) <= maxValue
     })
   }
+
   return filteredCollection
 }

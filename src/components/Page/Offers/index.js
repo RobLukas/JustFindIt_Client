@@ -8,47 +8,71 @@ import OfferList from '../../Container/Offers/OfferList'
 import OfferItem from '../../Container/Offers/OfferDetails'
 import Map from '../../Container/Map'
 
-import offersData from '../../../api/offers'
-import { filter } from '../../../api/filters'
+import { filter as filterOffers } from '../../../api/filters'
 
-const Offers = ({ cityCategory, technologyCategory, offerItem, ...props }) => {
-  const filteredOffers = filter(offersData, cityCategory, technologyCategory)
+const Offers = ({
+  offers,
+  offerItem,
+  cityCategory,
+  technologyCategory,
+  expLevel,
+  minValue,
+  maxValue,
+  ...props
+}) => {
+  const filteredOffers = filterOffers(
+    offers,
+    cityCategory,
+    technologyCategory,
+    expLevel,
+    minValue,
+    maxValue
+  )
 
-  if (offerItem) {
-    const { geoPosition } = offerItem
-
-    return (
-      <>
-        <Header />
-        <div style={{ flex: 1 }}>
+  const getOfferView = () => {
+    if (offerItem) {
+      return (
+        <>
           <DesktopFilter {...props} />
           <OfferItem offerItem={offerItem} {...props} />
-          <Map
-            offersList={filteredOffers}
-            geoPosition={geoPosition}
-            {...props}
-          />
-        </div>
-      </>
-    )
+        </>
+      )
+    } else {
+      return (
+        <>
+          <Filters {...props} />
+          <OfferList offersList={filteredOffers} />
+        </>
+      )
+    }
   }
+
   return (
     <>
       <Header />
       <div style={{ flex: 1 }}>
-        <Filters {...props} />
-        <OfferList offersList={filteredOffers} />
-        <Map offersList={filteredOffers} {...props} />
+        {getOfferView()}
+        <Map
+          offersList={filteredOffers}
+          specificGeoPosition={offerItem ? offerItem.geoPosition : undefined}
+          {...props}
+        />
       </div>
     </>
   )
 }
 
-const mapStateToProps = ({ filters }) => {
-  const { cityCategory, technologyCategory } = filters
+const mapStateToProps = ({ filters, offers }) => {
+  const { cityCategory, technologyCategory, expLevel } = filters
+  const { minValue, maxValue } = filters.salary
+
   return {
+    offers,
     cityCategory,
-    technologyCategory
+    technologyCategory,
+    expLevel,
+    minValue,
+    maxValue
   }
 }
 

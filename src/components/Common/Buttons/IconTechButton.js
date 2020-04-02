@@ -10,15 +10,11 @@ import {
 
 export default function IconButton({
   technology,
-  onChange,
+  onClick,
   selected,
   isSelectedAll
 }) {
   const { path, width, widthBox, heightBox } = techIcons[technology]
-
-  const handleChange = e => {
-    onChange(technology)
-  }
 
   return (
     <>
@@ -27,7 +23,7 @@ export default function IconButton({
           isSelectedAll={isSelectedAll}
           selected={selected}
           linearGradient={backgroundLinear[technology]}
-          onClick={handleChange}
+          onClick={onClick}
         >
           <IconTechStyled
             width={width}

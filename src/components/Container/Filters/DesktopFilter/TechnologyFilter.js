@@ -11,7 +11,7 @@ const TechnologyFilter = ({
   changeTechnologyCategory,
   history
 }) => {
-  const onChangeTechnology = technology => {
+  const handleClickTechnology = technology => {
     history.push('/offers')
     changeTechnologyCategory(technology)
   }
@@ -23,9 +23,9 @@ const TechnologyFilter = ({
           return (
             <FilterButtonStyled
               selected={technology === technologyCategory}
-              onClick={e => onChangeTechnology(technology)}
+              onClick={e => handleClickTechnology(technology)}
             >
-              All
+              {'All'}
             </FilterButtonStyled>
           )
         }
@@ -34,7 +34,7 @@ const TechnologyFilter = ({
             isSelectedAll={technologyCategory === 'All'}
             selected={technology === technologyCategory}
             technology={technology}
-            onChange={onChangeTechnology}
+            onClick={e => handleClickTechnology(technology)}
           />
         )
       })}

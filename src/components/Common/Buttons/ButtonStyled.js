@@ -45,12 +45,12 @@ const BrightnessIconStyled = styled(Brightness3Icon)(({ theme }) => ({
 }))
 
 const IconDivInnerStyled = styled.div(props => ({
+  display: 'flex',
+  margin: '0 auto',
   background:
     props.isSelectedAll || props.selected
       ? `linear-gradient(${props.linearGradient})`
       : 'linear-gradient(-90deg, rgb(145, 147, 170), rgb(125, 130, 168))',
-  display: 'flex',
-  margin: '0 auto',
   paddingBottom: 5,
   alignItems: 'center',
   justifyContent: 'center',
@@ -60,13 +60,14 @@ const IconDivInnerStyled = styled.div(props => ({
   height: 35,
   position: 'relative',
   cursor: 'pointer',
-  overflow: 'hidden',
-  userSelect: 'none',
-  verticalAlign: 'middle',
-  zIndex: 1,
   padding: 0,
-  color: '#fff',
-  borderRadius: '50%'
+  borderRadius: '50%',
+  transition: 'all 0.3s ease 0s',
+  '&:hover': {
+    color: 'white',
+    fill: 'white',
+    backgroundPosition: '35px center'
+  }
 }))
 
 const TechnologyIconStyled = styled.div({
@@ -77,7 +78,7 @@ const TechnologyIconStyled = styled.div({
   cursor: 'pointer'
 })
 
-const IconDropDownStyled = styled.div({
+const DropDownIconStyled = styled.div({
   borderRadius: '50%',
   display: 'inline-block',
   position: 'relative',
@@ -107,9 +108,11 @@ const DropDownExpStyled = styled.div({
   position: 'relative'
 })
 
-const DropDownDivInsideStyled = styled.div(({ theme }) => ({
+const DropDownButtonStyled = styled.button(({ theme, selected }) => ({
   color: theme.filter.button.color,
-  backgroundColor: theme.secondary.background,
+  background: selected
+    ? theme.filter.selected.background
+    : theme.secondary.background,
   marginLeft: 0,
   cursor: 'pointer',
   padding: '0 7px 0 12px',
@@ -141,14 +144,14 @@ export {
   MoreHorizIconStyled,
   IconButtonContainer,
   DropDownExpStyled,
-  DropDownDivInsideStyled,
+  DropDownButtonStyled,
   TitleTechnologySpanStyled,
   TechnologyIconStyled,
   IconDivInnerStyled,
   IconTechStyled,
   DropDownSalaryStyled,
   SelectStyled,
-  IconDropDownStyled,
+  DropDownIconStyled,
   SunnyIconStyled,
   BrightnessIconStyled
 }

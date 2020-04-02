@@ -1,19 +1,18 @@
 import React from 'react'
 import IconButton from '@material-ui/core/IconButton'
 
-import {
-  MoreHorizIconStyled,
-  IconButtonContainer
-} from '../Buttons/ButtonStyled'
+import { MoreHorizIconStyled, IconButtonContainer } from './ButtonStyled'
 
-export default function IconDropDown() {
+const IconDotsButton = ({ handleClick }) => {
   return (
     <>
       <IconButtonContainer>
-        <IconButton size={'small'}>
+        <IconButton onClick={handleClick} size={'small'}>
           <MoreHorizIconStyled />
         </IconButton>
       </IconButtonContainer>
     </>
   )
 }
+
+export default IconDotsButton

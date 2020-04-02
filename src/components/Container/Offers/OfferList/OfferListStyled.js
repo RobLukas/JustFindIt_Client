@@ -13,4 +13,20 @@ const LinkStyled = styled(Link)({
   }
 })
 
-export { OfferListOfItems, LinkStyled }
+const NoJobOfferContainer = styled.div({
+  display: 'flex',
+  position: 'absolute',
+  justifyContent: 'center',
+  alignItems: 'flex-end',
+  fontSize: 14,
+  left: 0,
+  top: 0,
+  height: 70,
+  width: '100%'
+})
+
+const NoJobOfferTitle = styled.span(({ theme }) => ({
+  color: theme.secondary.color
+}))
+
+export { OfferListOfItems, LinkStyled, NoJobOfferContainer, NoJobOfferTitle }
