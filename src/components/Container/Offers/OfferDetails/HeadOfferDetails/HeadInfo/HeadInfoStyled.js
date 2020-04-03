@@ -2,16 +2,18 @@ import styled from 'styled-components'
 import ArrowBackIcon from '@material-ui/icons/ArrowBack'
 import MailIcon from '@material-ui/icons/Mail'
 
-const HeadInfoContainer = styled.div(props => ({
-  '@media (max-width: 1020px)': {
-    padding: '25px 9px 25px 9px'
-  },
-  height: '100%',
-  filter: 'brightness(0.85)',
-  borderRadius: '0 0 4px 4px',
-  padding: '20px 20px 0 20px',
-  background: `url(${props.backgroundImg}), linear-gradient(${props.backgroundLinear})`
-}))
+const HeadInfoContainer = styled.div(
+  ({ theme, backgroundImg, backgroundLinear }) => ({
+    '@media (max-width: 1020px)': {
+      padding: '25px 9px 25px 9px'
+    },
+    height: '100%',
+    filter: `brightness(${theme.offer.header.filter.brightness})`,
+    borderRadius: '0 0 4px 4px',
+    padding: '20px 20px 0 20px',
+    background: `url(${backgroundImg}), linear-gradient(${backgroundLinear})`
+  })
+)
 
 const BackButtonStyled = styled.button({
   position: 'absolute',

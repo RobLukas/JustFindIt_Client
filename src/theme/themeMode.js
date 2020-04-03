@@ -9,7 +9,7 @@ export const lightMode = {
   },
   dropdown: {
     button: {
-      hover: '#393939'
+      hover: '#f3f6f8'
     }
   },
   scrollbar: {
@@ -29,6 +29,9 @@ export const lightMode = {
   offer: {
     header: {
       title: '#fff',
+      filter: {
+        brightness: '1'
+      },
       icons: {
         companyName: '#ff5252',
         companySize: '#fb8c00',
@@ -90,6 +93,9 @@ export const darkMode = {
   offer: {
     header: {
       title: '#fff',
+      filter: {
+        brightness: '0.85'
+      },
       icons: {
         companyName: '#ff5252',
         companySize: '#fb8c00',

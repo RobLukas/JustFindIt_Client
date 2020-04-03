@@ -5,9 +5,9 @@ const DropDownContainer = styled.div({
   position: 'relative'
 })
 
-const DropDownSalaryContent = styled.div({
+const DropDownSalaryContent = styled.div(({ theme }) => ({
   position: 'absolute',
-  backgroundColor: '#4c5052',
+  backgroundColor: theme.secondary.background,
   width: '200px',
   boxShadow: '0px 2px 24px 0px rgba(0,0,0,0.5)',
   borderRadius: 4,
@@ -17,18 +17,18 @@ const DropDownSalaryContent = styled.div({
   left: '50%',
   right: 0,
   transform: 'translate(-50%, 0)'
-})
+}))
 
-const DropDownContent = styled.div({
+const DropDownContent = styled.div(({ theme }) => ({
   position: 'absolute',
-  backgroundColor: '#4c5052',
+  backgroundColor: theme.secondary.background,
   boxShadow: '0px 2px 24px 0px rgba(0,0,0,0.5)',
   borderRadius: 4,
   marginTop: 5,
   left: '50%',
   transform: 'translate(-50%, 0)',
   zIndex: 2
-})
+}))
 
 const DropDownListContainer = styled.ul({
   margin: 0,
@@ -42,7 +42,7 @@ const DropDownListElement = styled.li(({ theme }) => ({
   justifyContent: 'center',
   fontSize: 14,
   display: 'flex',
-  color: theme.primary.color,
+  color: theme.filter.button.color,
   cursor: 'pointer',
   margin: 0,
   padding: '7px 24px 7px 24px',
@@ -52,7 +52,7 @@ const DropDownListElement = styled.li(({ theme }) => ({
 }))
 
 const DropDownSalaryTitle = styled.div(({ theme }) => ({
-  color: theme.primary.color,
+  color: theme.filter.button.color,
   paddingBottom: 20,
   fontSize: 14
 }))

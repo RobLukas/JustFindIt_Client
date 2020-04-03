@@ -109,7 +109,7 @@ const DropDownExpStyled = styled.div({
 })
 
 const DropDownButtonStyled = styled.button(({ theme, selected }) => ({
-  color: theme.filter.button.color,
+  color: selected ? theme.filter.selected.color : theme.filter.button.color,
   background: selected
     ? theme.filter.selected.background
     : theme.secondary.background,
@@ -130,7 +130,7 @@ const DropDownButtonStyled = styled.button(({ theme, selected }) => ({
   outline: 0,
   border: 0,
   '.MuiSvgIcon-root': {
-    fill: theme.filter.button.color
+    fill: selected ? theme.filter.selected.color : theme.filter.button.color
   },
   '-webkit-tap-highlight-color': 'transparent',
   '&:hover': {
