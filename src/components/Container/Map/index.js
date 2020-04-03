@@ -4,6 +4,7 @@ import { TileLayer } from 'react-leaflet'
 
 import Marker from './Marker'
 import { citiesGeoPosition } from '../../../api/categories'
+import { darkModeMap, lightModeMap } from '../../../api/maps'
 import {
   MapContainerStyled,
   MapInsideContainerStyled,
@@ -19,10 +20,6 @@ const MapContainer = ({
 }) => {
   let positionMap
   let zoomMap
-  const lightModeMap =
-    'https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png'
-  const darkModeMap =
-    'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png'
 
   if (specificGeoPosition) {
     positionMap = specificGeoPosition
