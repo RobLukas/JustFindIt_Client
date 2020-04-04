@@ -1,6 +1,6 @@
-## Just Find It
+## Project with programming offers
 
-Just Find It is an application inspired by the old version of the justjoin.it copy of the internet portal implemented from scratch.
+Project written for scientific purposes only. The data may not have been real.
 
 ### `npm start`
 
