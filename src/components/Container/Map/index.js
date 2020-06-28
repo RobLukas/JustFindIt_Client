@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { v4 as uuidv4 } from 'uuid';
 import { TileLayer } from 'react-leaflet'
 
 import Marker from './Marker'
@@ -39,7 +40,7 @@ const MapContainer = ({
           <MapLeafletStyled center={positionMap} zoom={zoomMap} animate={true}>
             <TileLayer url={isLightMode ? lightModeMap : darkModeMap} />
             {offersList.map(offerItem => (
-              <Marker offerItem={offerItem} {...props} />
+              <Marker key={uuidv4()} offerItem={offerItem} {...props} />
             ))}
           </MapLeafletStyled>
         </MapInsideContainerStyled>

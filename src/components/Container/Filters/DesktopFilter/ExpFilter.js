@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
+import { v4 as uuidv4 } from 'uuid';
 import ClickAwayListener from '@material-ui/core/ClickAwayListener'
 import { expLevels } from '../../../../api/categories'
 import { changeExpLevel } from '../../../../redux/actions/filters'
@@ -38,6 +39,7 @@ const DropDownExp = ({ expLevel, changeExpLevel, history }) => {
               <DropDownListContainer onClick={handleClick}>
                 {expLevels.map(expLevel => (
                   <DropDownListElement
+                    key={uuidv4()}
                     onClick={() => handleClickExpLevel(expLevel)}
                   >
                     {expLevel}

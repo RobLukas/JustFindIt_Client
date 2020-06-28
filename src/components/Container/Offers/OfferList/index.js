@@ -1,4 +1,5 @@
 import React from 'react'
+import { v4 as uuidv4 } from 'uuid';
 
 import OfferItem from './OfferItem'
 import {
@@ -19,7 +20,7 @@ const OfferList = ({ offersList }) => {
             {offersList.map(offerItem => {
               const { id } = offerItem
               return (
-                <LinkStyled to={`/offers/${id}`}>
+                <LinkStyled key={uuidv4()} to={`/offers/${id}`}>
                   <OfferItem {...offerItem} />
                 </LinkStyled>
               )

@@ -1,4 +1,5 @@
 import React from 'react'
+import { v4 as uuidv4 } from 'uuid';
 
 import HeadOfferDetails from './HeadOfferDetails'
 import SpecificOfferDetails from './SpecificOfferDetails'
@@ -16,7 +17,7 @@ const OfferList = ({ offerItem, ...props }) => {
         <HeadOfferDetails offerItem={offerItem} {...props} />
         <SpecificOfferDetails titleName={'Tech Stack'}>
           {skills.map(techItemDesc => (
-            <TechStackItems techDesc={techItemDesc} />
+            <TechStackItems key={uuidv4()} techDesc={techItemDesc} />
           ))}
         </SpecificOfferDetails>
         <SpecificOfferDetails titleName={'Description'}>

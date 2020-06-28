@@ -1,9 +1,9 @@
-import styled from 'styled-components'
-import { Icon } from '@material-ui/core'
+import styled from 'styled-components';
+import { Icon } from '@material-ui/core';
 
 const OfferItemContainer = styled.li(({ theme }) => ({
   '@media (max-width: 1020px)': {
-    height: 86
+    height: 86,
   },
   height: 77,
   cursor: 'pointer',
@@ -11,19 +11,19 @@ const OfferItemContainer = styled.li(({ theme }) => ({
   borderRadius: 6,
   margin: '0 10px 12px 10px',
   padding: 0,
-  display: 'flex'
-}))
+  display: 'flex',
+}));
 
 const OfferItemContentStyled = styled.div({
   width: '100%',
-  display: 'flex'
-})
+  display: 'flex',
+});
 
-const OfferItemSidebarColorStyled = styled.div(props => ({
+const OfferItemSidebarColorStyled = styled.div((props) => ({
   background: `linear-gradient(${props.backgroundColor})`,
   width: 5,
-  borderRadius: '6px 0 0 6px'
-}))
+  borderRadius: '6px 0 0 6px',
+}));
 
 const OfferItemLinkStyled = styled.a({
   display: 'flex',
@@ -32,13 +32,13 @@ const OfferItemLinkStyled = styled.a({
   height: '100%',
   fontSize: 11,
   alignItems: 'center',
-  flex: 1
-})
+  flex: 1,
+});
 
 const OfferItemLogoContainer = styled.div({
   flex: '0 0 112px',
-  position: 'relative'
-})
+  position: 'relative',
+});
 
 const OfferItemLogoStyled = styled.img({
   position: 'absolute',
@@ -49,29 +49,29 @@ const OfferItemLogoStyled = styled.img({
   maxWidth: 85,
   transform: 'translate(-50%, -50%)',
   display: 'block',
-  borderRadius: 5
-})
+  borderRadius: 5,
+});
 
 const OfferItemDescContainer = styled.div({
   width: '100%',
   paddingRight: 20,
-  minWidth: 0
-})
+  minWidth: 0,
+});
 
 const OfferItemTitleContainer = styled.div(({ theme }) => ({
   '@media (max-width: 1020px)': {
-    display: 'block'
+    display: 'block',
   },
   color: theme.primary.color,
   display: 'flex',
-  alignItems: 'center'
-}))
+  alignItems: 'center',
+}));
 
 const OfferItemTitleWorkplaceStyled = styled.span({
   '@media (max-width: 1020px)': {
     whiteSpace: 'initial',
     overflow: 'initial',
-    textOverflow: 'initial'
+    textOverflow: 'initial',
   },
   whiteSpace: 'nowrap',
   overflow: 'hidden',
@@ -79,51 +79,51 @@ const OfferItemTitleWorkplaceStyled = styled.span({
   fontSize: 16,
   margin: '0 5px 0 0',
   fontWeight: 600,
-  lineHeight: '23px'
-})
+  lineHeight: '23px',
+});
 
 const OfferItemTitleSalaryContainer = styled.div({
   marginLeft: 'auto',
   display: 'flex',
-  alignItems: 'center'
-})
+  alignItems: 'center',
+});
 
 const OfferItemTitleSalaryStyled = styled.span({
   '@media (max-width: 1020px)': {
-    lineHeight: '11px'
+    lineHeight: '11px',
   },
   color: '#51b368',
   verticalAlign: 'middle',
   textAlign: 'right',
   fontSize: 16,
-  whiteSpace: 'nowrap'
-})
+  whiteSpace: 'nowrap',
+});
 
 const OfferItemAddressContainer = styled.div({
   '@media (max-width: 1020px)': {
-    display: 'none'
+    display: 'none',
   },
   display: 'flex',
   alignItems: 'center',
-  marginTop: 6
-})
+  marginTop: 6,
+});
 
-const OfferItemIconStyled = styled(Icon)(({ theme }) => ({
+const OfferItemIconStyled = styled(Icon)(() => ({
   verticalAlign: 'text-top',
-  fontSize: 14
-}))
+  fontSize: 14,
+}));
 
 const OfferItemAddressTitleStyled = styled.span(({ theme }) => ({
   verticalAlign: 'middle',
   textAlign: 'center',
   color: theme.secondary.color,
   marginLeft: 3,
-  fontSize: 11
-}))
+  fontSize: 11,
+}));
 
 const OfferItemNewTitleStyled = styled.span(({ theme }) => ({
   '@media (max-width: 1020px)': {
-    marginLeft: 'auto'
+    marginLeft: 'auto',
   },
   marginLeft: 21,
   color: theme.offers.newTitle.color,
@@ -133,8 +133,8 @@ const OfferItemNewTitleStyled = styled.span(({ theme }) => ({
   whiteSpace: 'nowrap',
   fontWeight: 400,
   verticalAlign: 'bottom',
-  fontSize: 12
-}))
+  fontSize: 12,
+}));
 
 const OfferItemTechnologyContainer = styled.div({
   marginLeft: 'auto',
@@ -142,8 +142,8 @@ const OfferItemTechnologyContainer = styled.div({
   flex: 1,
   display: 'flex',
   justifyContent: 'flex-end',
-  overflow: 'hidden'
-})
+  overflow: 'hidden',
+});
 
 const OfferItemTechnologyTitleStyled = styled.span(({ theme }) => ({
   color: theme.primary.color,
@@ -156,8 +156,8 @@ const OfferItemTechnologyTitleStyled = styled.span(({ theme }) => ({
   padding: '4px 7px',
   textOverflow: 'ellipsis',
   overflow: 'hidden',
-  minWidth: '1ch'
-}))
+  minWidth: '1ch',
+}));
 
 export {
   OfferItemContainer,
@@ -176,5 +176,5 @@ export {
   OfferItemAddressTitleStyled,
   OfferItemNewTitleStyled,
   OfferItemTechnologyContainer,
-  OfferItemTechnologyTitleStyled
-}
+  OfferItemTechnologyTitleStyled,
+};

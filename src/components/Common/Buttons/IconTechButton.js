@@ -1,20 +1,20 @@
-import React from 'react'
+import React from 'react';
 
-import { techIcons, backgroundLinear } from '../../../api/filters'
+import { techIcons, backgroundLinear } from '../../../api/techIcon';
 import {
   TitleTechnologySpanStyled,
   TechnologyIconStyled,
   IconDivInnerStyled,
-  IconTechStyled
-} from './ButtonStyled'
+  IconTechStyled,
+} from './ButtonStyled';
 
 export default function IconButton({
   technology,
   onClick,
   selected,
-  isSelectedAll
+  isSelectedAll,
 }) {
-  const { path, width, widthBox, heightBox } = techIcons[technology]
+  const { path, width, widthBox, heightBox } = techIcons[technology];
 
   return (
     <>
@@ -36,5 +36,5 @@ export default function IconButton({
         <TitleTechnologySpanStyled>{technology}</TitleTechnologySpanStyled>
       </TechnologyIconStyled>
     </>
-  )
+  );
 }

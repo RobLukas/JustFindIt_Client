@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
-import levelCollection from './levelCollection'
+import levelCollection from './levelCollection';
 
 import {
   TechStackContainer,
@@ -8,15 +9,15 @@ import {
   TechStackSkillPointContainer,
   TechStackSkillPoint,
   TechStackName,
-  TechStackSkillName
-} from './TechStackStyled'
+  TechStackSkillName,
+} from './TechStackStyled';
 
 const TechStackItems = ({ techDesc }) => {
-  const { name, level } = techDesc
-  const numStars = 5
+  const { name, level } = techDesc;
+  const numStars = 5;
 
   function isSelected(level, index) {
-    return level - 1 >= index
+    return level - 1 >= index;
   }
 
   return (
@@ -25,7 +26,10 @@ const TechStackItems = ({ techDesc }) => {
         <TechStackContent>
           <TechStackSkillPointContainer>
             {[...Array(numStars)].map((elem, index) => (
-              <TechStackSkillPoint selected={isSelected(level, index)} />
+              <TechStackSkillPoint
+                key={uuidv4()}
+                selected={isSelected(level, index)}
+              />
             ))}
           </TechStackSkillPointContainer>
           <TechStackName>{name}</TechStackName>
@@ -33,7 +37,7 @@ const TechStackItems = ({ techDesc }) => {
         </TechStackContent>
       </TechStackContainer>
     </>
-  )
-}
+  );
+};
 
-export default TechStackItems
+export default TechStackItems;

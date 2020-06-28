@@ -1,15 +1,15 @@
-import React from 'react'
-import { connect } from 'react-redux'
+import React from 'react';
+import { connect } from 'react-redux';
 
-import Switch from '@material-ui/core/Switch'
+import Switch from '@material-ui/core/Switch';
 
-import { SunnyIconStyled, BrightnessIconStyled } from './ButtonStyled'
-import { switchThemeMode } from '../../../redux/actions/themeMode'
+import { SunnyIconStyled, BrightnessIconStyled } from './ButtonStyled';
+import { switchThemeMode } from '../../../redux/actions/themeMode';
 
 const SwitchModeButton = ({ isLightMode, switchThemeMode }) => {
-  const handleSwitchChange = e => {
-    switchThemeMode(e.target.checked)
-  }
+  const handleSwitchChange = (e) => {
+    switchThemeMode(e.target.checked);
+  };
 
   return (
     <>
@@ -18,8 +18,7 @@ const SwitchModeButton = ({ isLightMode, switchThemeMode }) => {
           <label>
             <SunnyIconStyled />
             <Switch
-              defaultChecked
-              checked={isLightMode}
+              checked={!isLightMode || false}
               onChange={handleSwitchChange}
               color={'default'}
             />
@@ -28,14 +27,13 @@ const SwitchModeButton = ({ isLightMode, switchThemeMode }) => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-const mapStateToProps = ({ themeMode }) => {
-  const { isLightMode } = themeMode
-  return isLightMode
-}
+const mapStateToProps = ({ themeMode }) => ({
+  isLightMode: themeMode.isLightMode,
+});
 
-const mapDispatchToProps = { switchThemeMode }
+const mapDispatchToProps = { switchThemeMode };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SwitchModeButton)
+export default connect(mapStateToProps, mapDispatchToProps)(SwitchModeButton);

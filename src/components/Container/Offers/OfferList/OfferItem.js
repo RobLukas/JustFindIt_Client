@@ -1,6 +1,7 @@
-import React from 'react'
-import BusinessIcon from '@material-ui/icons/Business'
-import PlaceIcon from '@material-ui/icons/Place'
+import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
+import BusinessIcon from '@material-ui/icons/Business';
+import PlaceIcon from '@material-ui/icons/Place';
 
 import {
   OfferItemContainer,
@@ -19,10 +20,10 @@ import {
   OfferItemAddressTitleStyled,
   OfferItemNewTitleStyled,
   OfferItemTechnologyContainer,
-  OfferItemTechnologyTitleStyled
-} from './OfferItemStyled'
+  OfferItemTechnologyTitleStyled,
+} from './OfferItemStyled';
 
-import linearCollection from '../../../../api/iconTechTheme'
+import linearCollection from '../../../../api/iconTechTheme';
 
 const OfferItem = ({
   companyName,
@@ -34,7 +35,7 @@ const OfferItem = ({
   city,
   companyLogo,
   technologyCategory,
-  technologies
+  technologies,
 }) => {
   return (
     <>
@@ -70,7 +71,7 @@ const OfferItem = ({
                 <OfferItemIconStyled
                   style={{
                     fontSize: 14,
-                    marginLeft: 20
+                    marginLeft: 20,
                   }}
                   component={PlaceIcon}
                 />
@@ -78,8 +79,8 @@ const OfferItem = ({
                   {`${street}, ${city}`}
                 </OfferItemAddressTitleStyled>
                 <OfferItemTechnologyContainer>
-                  {technologies.map(technologyItem => (
-                    <OfferItemTechnologyTitleStyled>
+                  {technologies.map((technologyItem) => (
+                    <OfferItemTechnologyTitleStyled key={uuidv4()}>
                       {technologyItem}
                     </OfferItemTechnologyTitleStyled>
                   ))}
@@ -90,7 +91,7 @@ const OfferItem = ({
         </OfferItemContentStyled>
       </OfferItemContainer>
     </>
-  )
-}
+  );
+};
 
-export default OfferItem
+export default OfferItem;
